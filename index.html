@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta tags to improve SEO and description for the webpage -->
+    <meta name="description" content="TLR Excavation provides expert basement digging, driveway builds, and site development services. Professional, experienced, and equipped to handle your excavation needs.">
+    <meta name="keywords" content="excavation, basement digging, driveway, pond repair, septic installation, site development, snow removal">
+    <meta charset="UTF-8">  <!-- Character encoding set to UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- Ensures proper scaling on mobile devices -->
+    <title>Excavation Company - Basement Digging Specialists</title> <!-- The title of the webpage shown in the browser tab -->
+    <link rel="stylesheet" href="styles.css">  <!-- External CSS file for styling -->
+    
+    <script>
+        // Function to toggle the mobile menu visibility
+        function toggleMenu() {
+            const menu = document.getElementById('navMenu');
+            menu.classList.toggle('show');  // Adds/removes 'show' class to control visibility
+        }
+    </script>
+    
+    <style>
+        /* Basic styling for the body including background image, text, and layout */
+        body {
+            font-family: Arial, sans-serif;  /* Sets font family for text */
+            margin: 0;  /* Removes default margin */
+            padding: 0;  /* Removes default padding */
+            background-image: url('images/excavator-photo.png');  /* Background image for the webpage */
+            background-repeat: no-repeat;  /* Prevents repeating the background image */
+            background-size: cover;  /* Ensures the background image covers the entire viewport */
+            background-color: rgba(0, 0, 0, 0.5);  /* Dark overlay to improve text readability */
+            min-height: 100vh;  /* Ensures the background covers the full viewport height */
+            background-position: center;  /* Centers the background image */
+        }
+
+        /* Media query for screens smaller than 600px (mobile devices) */
+        @media (max-width: 600px) {
+            /* Adjusts background image for smaller screens */
+            background-image: url('images/excavator-photo-little.png');  /* Image set for small screens width 400px */
+        }
+
+        /* Container styling for the contact section */
+        .contact-container {
+            display: flex;  /* Flexbox layout */
+            align-items: center;  /* Vertically center items */
+            justify-content: flex-start;  /* Align items to the left */
+            gap: 20px;  /* Space between items */
+        }
+
+        /* Additional styling for the contact paragraph and image */
+        .contact-container picture {
+            max-width: 50%;  /* Limits the image width to 50% */
+        }
+        .contact-container p {
+            max-width: 50%;  /* Limits text width to 50% */
+            font-size: 1.5rem;  /* Sets font size for better readability */
+            line-height: 1.6;   /* Line height to improve readability */
+        }
+
+        /* Smaller text for smaller screen sizes */
+        @media (max-width: 600px) {
+            .contact-container p {
+                font-size: 1.2rem;  /* Slightly smaller text for mobile screens */
+            }
+        }
+
+        /* Adjust layout for smaller screens (stacking elements vertically) */
+        @media (max-width: 600px) {
+            .contact-container {
+                flex-direction: column;  /* Stacks the image and text vertically */
+                align-items: center;  /* Centers elements horizontally */
+            }
+
+            .contact-container picture,
+            .contact-container p {
+                max-width: 100%;  /* Makes image and text take full width */
+            }
+        }
+
+        /* Header section styling */
+        header {
+            background-color: rgba(0, 123, 255, 0.8);  /* Semi-transparent blue background */
+            color: white;  /* White text color */
+            padding: 20px 0;  /* Padding for spacing */
+            text-align: center;  /* Centers text */
+            position: relative;  /* Positions header elements */
+            display: flex;
+            align-items: center;  /* Vertically aligns items */
+            justify-content: center;  /* Centers header content */
+            flex-direction: column;  /* Aligns header content vertically */
+        }
+
+        header p {
+            font-size: 1.2rem;  /* Font size for the paragraph under the header */
+            margin-top: 10px;  /* Adds margin to space out text */
+        }
+
+        /* Navigation menu styling */
+        nav {
+            background: #0056b3;  /* Blue background for navigation */
+            padding: 10px 0;  /* Padding around the navigation bar */
+        }
+
+        nav ul {
+            list-style: none;  /* Removes default list style */
+            padding: 0;  /* Removes padding */
+            display: flex;  /* Flex layout for navigation items */
+            justify-content: center;  /* Centers items in the navigation bar */
+        }
+
+        nav button {
+            display: none;  /* Hides the navigation button on larger screens */
+        }
+
+        /* Mobile-specific styles for the navigation menu */
+        @media (max-width: 768px) {
+            nav button {
+                display: block;  /* Displays the button on mobile screens */
+            }
+
+            nav ul {
+                display: none;  /* Hides the list by default */
+                flex-direction: column;  /* Stacks items vertically */
+                align-items: center;  /* Centers the menu items */
+            }
+
+            nav ul.show {
+                display: block;  /* Displays the menu when the 'show' class is added */
+            }
+        }
+
+        /* Styling for individual navigation list items */
+        nav ul li {
+            margin: 0 15px;  /* Adds margin around navigation items */
+        }
+
+        nav ul li a {
+            color: white;  /* Sets link color to white */
+            text-decoration: none;  /* Removes underline from links */
+            font-weight: bold;  /* Makes text bold */
+        }
+
+        /* Hover effect for navigation links */
+        nav ul li a:hover {
+            text-decoration: underline;  /* Adds underline on hover */
+        }
+
+        /* General container for content with padding and margins */
+        .container {
+            width: 80%;  /* Sets container width */
+            margin: auto;  /* Centers the container */
+            overflow: hidden;  /* Prevents overflow */
+            padding: 20px;  /* Adds padding inside the container */
+        }
+
+        h1, h2, h3 {
+            color:white;  /* White text for headings */
+        }
+
+        /* Styling for service, about, and testimonial sections */
+        .services, .about, .testimonials, .contact {
+            background: rgba(0, 0, 0, 0.5);  /* Dark background for emphasis */
+            color:white;  /* White text color */
+            padding: 20px;  /* Padding for content inside each section */
+            margin: 20px 0;  /* Adds space between sections */
+            border-radius: 8px;  /* Rounded corners */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);  /* Adds shadow for visual appeal */
+        }
+
+        /* Styling for forms */
+        form {
+            display: flex;  /* Flexbox layout */
+            flex-direction: column;  /* Stacks form elements vertically */
+        }
+
+        input, textarea {
+            margin: 10px 0;  /* Adds margin between form elements */
+            padding: 10px;  /* Adds padding inside input fields */
+            border: 1px solid #ccc;  /* Light border for input fields */
+            border-radius: 4px;  /* Rounded corners for input fields */
+        }
+
+        /* Styling for buttons */
+        button {
+            transition: background-color 0.3s ease;  /* Smooth background color transition */
+            padding: 10px;
+            background-color: #007BFF;  /* Blue background for the button */
+            color: white;  /* White text */
+            border: none;  /* No border */
+            border-radius: 4px;  /* Rounded corners */
+            cursor: pointer;  /* Pointer cursor on hover */
+        }
+
+        /* Hover effect for buttons */
+        button:hover {
+            background-color: #b3007d;  /* Changes background color on hover */
+        }
+
+        /* Styling for Call-to-Action (CTA) buttons */
+        .cta-button {
+            background-color: #f69f8b;  /* Orange background */
+            color: white;  /* White text */
+            padding: 12px 20px;  /* Padding inside the button */
+            border-radius: 5px;  /* Rounded corners */
+            text-decoration: none;  /* No underline for links */
+            font-weight: bold;  /* Bold text */
+            transition: background-color 0.3s ease;  /* Smooth transition on hover */
+        }
+
+        .cta-button:hover {
+            background-color: #ee7d5b;  /* Darker orange on hover */
+        }
+
+        /* Styling for footer */
+        footer p {
+            color: white;  /* White text color */
+        }
+
+        /* Testimonial section styling */
+        .testimonials {
+            display: flex;
+            flex-direction: column;  /* Stacks testimonials vertically */
+            align-items: center;  /* Centers testimonials horizontally */
+            justify-content: center;  /* Centers testimonials vertically */
+            text-align: center;  /* Centers text inside blockquotes */
+            padding: 40px 20px;  /* Padding for spacing */
+        }
+
+        .testimonials blockquote {
+            width: 80%;  /* Limits blockquote width */
+            margin: 20px 0;  /* Adds margin around each testimonial */
+            padding: 20px;  /* Adds padding inside the blockquote */
+            background: rgba(0, 0, 0, 0.5);  /* Dark background for emphasis */
+            border-radius: 8px;  /* Rounded corners */
+            font-style: italic;  /* Italic text */
+        }
+
+        .testimonials cite {
+            display: block;  /* Displays the cite on its own line */
+            margin-top: 10px;  /* Adds space between quote and author */
+            text-align: right;  /* Aligns the author's name to the right */
+            font-weight: bold;  /* Makes the author's name bold */
+        }
+
+        .center-text {
+            padding: 20px;
+            text-align: left;  /* Left-aligned text */
+            font-size: 24px;  /* Larger font size */
+            font-family: Arial, sans-serif;  /* Sets font for text */
+        }
+    </style>
+</head>
+<body>
+    <!-- Header section with company name, slogan, and call-to-action button -->
+    <header>
+        <h1>TLR Excavation</h1>
+        <p>An established, independent, fully equipped, professionally run excavation business.</p>
+        <a href="#contact" class="cta-button">Get a Free Quote</a> <!-- Link to contact section -->
+    </header>
+
+    <!-- Navigation bar -->
+    <nav>
+        <button onclick="toggleMenu()">☰</button> <!-- Mobile menu toggle button -->
+        <ul id="navMenu">
+            <li><a href="#services">Services</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main content container -->
+    <div class="container">
+        <!-- Services section -->
+        <section id="services" class="services">
+            <h2>Our Services</h2>
+            <ul>
+                <li>Basement Excavation</li>
+                <li>Driveway Builds</li>
+                <li>Pond Repair</li>
+                <li>Septic Installation</li>
+                <li>Site Development</li>
+                <li>Snow Removal</li>
+            </ul>
+            <a href="#contact" class="cta-button">Request a Consultation</a>
+        </section>
+
+        <!-- About Us section -->
+    <section id="about" class="about">
+        <h2>About Us</h2>
+        <h3>Service:</h3>
+            <p>TLS Excavation provides top-quality excavation service. Our equipment is up to date and our operators are experienced. Work is done on schedule, efficently and done to the highest standards. Our company can offer the following assurances while many of our competitors can not:</p>
+         <ul>
+            <li>Maintains a permanent place of business</li>
+            <li>Has the financial status to meet obligations</li>
+            <li>Provides quotes showing detail on expenses and charges</li>
+            <li>Knows laws and regulations relating to the job</li>
+            <li>Is insured against accidents and damages</li>
+			<li>Has adequate equipment to complete the work</li>
+			<li>Has the necessary experience to do the job well</li>
+			<li>Has done similar types of work before</li>
+			<li>Can demonstrate the flexibility and availability to complete work on timel</li>
+			<li>Can provide references showing satisfied customers</li>
+        </ul>
+        <div class="center-text">
+            ~~~~~~~~~~~~~~~~~~~~~
+        </div>
+        <h3>Family:</h3>
+           <picture>
+                <!-- There is no option provided for small media -->
+                <img src="images/family2.jpg" alt="The Lawson family" name="Image1" />
+            </picture>
+            <div class="center-text">
+                ~~~~~~~~~~~~~~~~~~~~~
+            </div>
+        <h3>Vision:</h3>
+            <p>At TLR, we're more than just an excavation business; we're a family dedicated to delivering excellence. Our core values revolve around providing top-tier workmanship while truly comprehending the unique requirements of every project we undertake.</p>
+    
+            <div class="center-text">
+                ~~~~~~~~~~~~~~~~~~~~~
+            </div>
+        <h3>Our Story: ...(as told by a customer)</h3>
+            <p>My wife and I enjoyed meeting Jacob Lawson. We needed his help on a project too big for us to handle. One work day when lunchtime came around we invited Jake to join us for a meal. During the course of the meal Jacob explained how he happened to start his business, TLR. 
+
+                I think Jake’s story is one we can all learn from. Jacob, like many of us from time to time, was faced with adversity and needed to act. It’s my belief that Jake set an expample for how people should respond when dealing with a problem.
+                
+                Jake excelled at baseball. He was such a good catcher that he had thoughts of pursuing a baseball career. About that time he found the love of his life. This changed his priority from playing ball to providing for their future together. As a result he found a job with a large engineering firm that paid well. 
+                
+                Jacob’s new job provided him with many opportunities to gain experience and develop new skills. Jake worked on a wide variety of large development projects operating all kinds of heavy equipment. He was so good at his job that his employer worked him long hours for weeks with little time off.
+                
+                When Jacob’s first child was born he found himself needing to spend more time with his family. But the engineering firm had other ideas. Employer demands were inflexible. The company would not change their wants to assist with his needs.  Jake had a problem!
+                
+                As a result of hard work, saving, and good fortune Jacob had been able to buy some land near Lathrop Missouri. He built his home there and enjoyed what little free time he had at his home with family and friends. His wife created a web site where their family experiences could be shared with others. Their home came to be known affectionately as The Lawson Ranch, TLR. 
+                
+                Jacob realized that he could not have enough time with his family while working for the company. So, he started his own excavating business. The family website became the name of his business, TLR. Jake’s business continues to grow. Now TLR provides Jacob with the happiness that he sought and earned. </p>
+</section>
+        <!-- Testimonials section -->
+        <section id="testimonials" class="testimonials">
+            <h2>What Our Clients Say:</h2>
+        <blockquote>
+ 	<p>"We had Jake come out and quote rebuilding our roughly 1/4 mile driveway. He arrived promptly when he said he would, and had my quote to me within a couple of days. Price was good and he worked us into his schedule. Our driveway has never looked this good. He has done an amazing job and communicated with everything he would be doing. I highly recommend TLR Excavating."</p>
+        <cite>- Charles</cite>
+        <div class="center-text">
+            ~~~~~~~~~~~~~~~~~~~~~
+        </div>
+        </blockquote>
+        <blockquote>
+            <p>"TLR exceeded my expectations with their expertise and professionalism on my septic installation project. I highly recommend their services to anyone in need of reliable and knowledgeable septic installation experts."</p>
+            <cite>- Robert</cite>
+            <div class="center-text">
+                ~~~~~~~~~~~~~~~~~~~~~
+            </div>
+            </blockquote>
+        <blockquote>
+            <p>"We had enjoyed our quarter acre pond for over 20 years. But, time had taken its tole. The dike could no hold back water due to erosion, plant damage, muskrats, and crayfish. Fixing it would be no DIY job. We needed someone with experience, equipment, and skill. That someone was Jacob Lawson. Jacob did a remarkable job!  In addition to being a delight to to work with he took only two days to totally rebuild  our dike. The dike was not only repaired but also improved to a level far above its original condition. Instead of a liability the pond is once again a feature that adds real value to our home. THANK YOU JACOB!"</p>
+            <cite>- Earl</cite>
+            <div class="center-text">
+                ~~~~~~~~~~~~~~~~~~~~~
+            </div>
+        </blockquote>
+        <blockquote>
+            <p>"Our driveway was just some gravel spread on the ground. It required regular maintenance. I did the work often using a shovel and a rake. In order to replace the gravel with asphalt it would cost me a bundle. The cost would be around $15,000 for asphalt and around $30,000 for cement. On the other hand if TLR were to rebuild my driveway using gravel it would cost a small fraction of that amount. At the same time TLR could eliminate problems caused by poor drainage. By adding enough of the right kind of gravel and compacting as a finishing step the maintenance would be no greater than that required for asphalt or cement. Needless to say I had TLR do the job. They finished the work in two days without blocking access to our garage. It looks great! The driveway to our home is bigger and better than ever and will last for years thanks to TLR."</p>
+            <cite>- Jim</cite>
+            <div class="center-text">
+                ~~~~~~~~~~~~~~~~~~~~~
+            </div>
+        </blockquote>
+        <blockquote>
+            <p>I had some drainage issues and my driveway was horrible, Jake gave me a fair bid and did an excellent job!!</p>
+            <cite>- Steven</cite>
+        </blockquote>
+    </section>
+        <!-- Contact section with form -->
+        <section id="contact" class="contact">
+            <div class="contact-container">
+                <picture>
+                    <source media="(max-width: 600px)" srcset="images/bucket-big.png">
+                    <img src="images/bucket-big.png" alt="TLR excavation pro" />
+                </picture>
+                <p>The place to go for excavation services.</p>
+            </div>
+            <h2>Contact Us</h2>
+            <form action="process-form.php" method="POST">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <input type="text" name="phone" placeholder="Your Phone Number" required>
+                <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+
+        <!-- Footer section -->
+        <footer>
+            <p>&copy; 2024 TLR Excavation. All Rights Reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Sanitize and validate the input data
+    $name = sanitize_input($_POST["name"]);
+    $email = sanitize_input($_POST["email"]);
+    $phone = sanitize_input($_POST["phone"]);
+    $message = sanitize_input($_POST["message"]);
+
+    // Simple validation
+    if (empty($name) || empty($email) || empty($phone) || empty($message)) {
+        echo "All fields are required.";
+    } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        echo "Invalid email format.";
+    } else {
+        // Prepare the email content
+        $to = "your-email@example.com";  // Change this to your email address
+        $subject = "New Message from $name";
+        $body = "Name: $name\nEmail: $email\nPhone: $phone\n\nMessage:\n$message";
+        $headers = "From: $email";
+
+        // Send the email
+        if (mail($to, $subject, $body, $headers)) {
+            echo "Thank you! Your message has been sent.";
+        } else {
+            echo "Sorry, there was an error sending your message. Please try again.";
+        }
+    }
+}
+
+// Function to sanitize user input
+function sanitize_input($data) {
+    $data = trim($data); // Remove unnecessary whitespace
+    $data = stripslashes($data); // Remove slashes
+    $data = htmlspecialchars($data); // Convert special characters to HTML entities
+    return $data;
+}
+?>
+
+~~~~~~~~~~~~~~~~~~~~
+
+Example Format of a .php File (Combination of PHP and HTML):
+Here’s an example of a PHP file that contains both PHP and HTML. The PHP code is embedded within HTML to handle form submissions.
+
+php
+Copy code
+<?php
+// Process the form when submitted
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $name = sanitize_input($_POST["name"]);
+    $email = sanitize_input($_POST["email"]);
+    $phone = sanitize_input($_POST["phone"]);
+    $message = sanitize_input($_POST["message"]);
+
+    // Simple validation
+    if (empty($name) || empty($email) || empty($phone) || empty($message)) {
+        echo "All fields are required.";
+    } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        echo "Invalid email format.";
+    } else {
+        // Send the email or process the data here
+        echo "Thank you for your message!";
+    }
+}
+
+// Function to sanitize user input
+function sanitize_input($data) {
+    $data = trim($data);
+    $data = stripslashes($data);
+    $data = htmlspecialchars($data);
+    return $data;
+}
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+</head>
+<body>
+    <h1>Contact Us</h1>
+    <form action="process-form.php" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <input type="text" name="phone" placeholder="Your Phone Number" required>
+        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+</body>
+</html>
